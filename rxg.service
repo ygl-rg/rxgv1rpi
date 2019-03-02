@@ -1,0 +1,11 @@
+[Unit]
+Description=run rxgv1
+After=network.target
+
+[Service]
+LimitNOFILE=20000
+ExecStart=/usr/bin/python3 /home/pi/rxgv1/__main__.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
